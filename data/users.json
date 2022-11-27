@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "userName": "racel",
+    "password": "$2b$10$/JKDyj0.TvoP.3tFULnnGu4woPTcft8dOEBA4OyYmlYq/G/qBovqq"
+  },
+  {
+    "id": 2,
+    "userName": "racel1",
+    "password": "$2b$10$bZ.WCBaLJEtdzaqe1IEUiOPJNmLDYLS7sVDH0PLaus5ZDwp.i3hTa"
+  },
+  {
+    "id": 3,
+    "userName": "mendi",
+    "password": "$2b$10$UaD5UL5fkwE0sLfYdFEalukYbIz74iB6Lwremj1c3lvitptGzeozq"
+  }
+]

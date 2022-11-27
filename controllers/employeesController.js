@@ -1,7 +1,7 @@
 const fsPromises = require('fs').promises;
 const path = require('path');
 
-const data = {
+const employeesDB = {
   employees: require('../data/employees.json'),
   setEmploeeys: async function (data) {
     data.sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
@@ -14,37 +14,37 @@ const data = {
 };
 
 const getAllEmployees = (req, res) => {
-  res.json(data.employees);
+  res.json(employeesDB.employees);
 };
 
 const addEmployees = (req, res) => {
   const newEmploeey = {
-    id: data.employees[data.employees.length - 1].id + 1 || 1,
+    id: employeesDB.employees[employeesDB.employees.length - 1].id + 1 || 1,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
   };
   if (!req.body.firstName || !req.body.lastName)
     res.status(401).json({ message: 'fields reqaierds' });
 
-  data.setEmploeeys([...data.employees, newEmploeey]);
-  res.status(201).json(data.employees);
+    employeesDB.setEmploeeys([...employeesDB.employees, newEmploeey]);
+  res.status(201).json(employeesDB.employees);
 };
 const deleteEmploeey = (req, res) => {
-  const emploeey = data.employees.find((emp) => emp.id ===parseInt( req.params.id));
+  const emploeey = employeesDB.employees.find((emp) => emp.id ===parseInt( req.params.id));
   if (!emploeey) res.status(401).json({ message: 'emploeey not found' });
   else {
-    data.employees = data.employees.filter((emp) => emp.id !== emploeey.id);
+    employeesDB.employees = employeesDB.employees.filter((emp) => emp.id !== emploeey.id);
 
-    data.setEmploeeys([...data.employees]);
-    res.status(201).json(data.employees);
+    employeesDB.setEmploeeys([...employeesDB.employees]);
+    res.status(201).json(employeesDB.employees);
   }
 };
 
 const updateEmploeey = (req, res) => {
-  let emploeey = data.employees.find(
+  let emploeey = employeesDB.employees.find(
     (emp) => emp.id === parseInt(req.params.id)
   );
-  data.employees = data.employees.filter(
+  employeesDB.employees = employeesDB.employees.filter(
     (emp) => emp.id !== parseInt(req.params.id)
   );
   if (!emploeey) res.status(401).json({ message: 'emploeey not found' });
@@ -55,13 +55,13 @@ const updateEmploeey = (req, res) => {
     emploeey.lastName = req.body.lastName
       ? req.body.lastName
       : emploeey.lastName;
-    data.setEmploeeys([...data.employees, emploeey]);
-    res.status(201).json(data.employees);
+    employeesDB.setEmploeeys([...employeesDB.employees, emploeey]);
+    res.status(201).json(employeesDB.employees);
   }
 };
 
 const getEmployee = (req, res) => {
-  const emploeey = data.employees.find(
+  const emploeey = employeesDB.employees.find(
     (emp) => emp.id === parseInt(req.params.id)
   );
   if (!emploeey) res.status(401).json({ message: 'emploeey not found' });

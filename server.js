@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', express.static(path.join(__dirname, '/public')));
 
 app.use('/employees', require('./api/employees'))
+app.use('/register', require('./api/register'))
+app.use('/auth', require('./api/auth'))
 app.use(logger)
 app.use(errorHandler)
 

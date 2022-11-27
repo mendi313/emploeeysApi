@@ -5,12 +5,12 @@ const employeesController = require('../controllers/employeesController');
 router
   .route('/')
   .get(employeesController.getAllEmployees)
-  .post(employeesController.addEmployees);
+  .post(employeesController.addEmployees)
+  .delete(employeesController.deleteEmploeey)
+  .put(employeesController.updateEmploeey);
 
 router
   .route('/:id')
-  .get(employeesController.getEmployee)
-  .put(employeesController.updateEmploeey)
-  .delete(employeesController.deleteEmploeey)
+  .get(employeesController.getEmployee);
 
 module.exports = router;

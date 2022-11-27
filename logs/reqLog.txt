@@ -19,3 +19,14 @@
 20221127	09:46:45	55bd14fa-dac8-42d7-877c-fc0ff1c357c5	GET	undefined	/register
 20221127	09:47:29	0b1d5c7b-c46a-4d41-b873-a3acbc8d08d9	GET	undefined	/register
 20221127	10:11:40	b2e9a143-c985-4318-a9bc-ed107e94383f	POST	undefined	/employees/3
+20221127	11:39:04	602ce785-e690-4ed3-9611-e3b85ee18401	POST	undefined	/employees/4
+20221127	12:05:20	30ec2b4f-1393-4e3b-9b3c-6afe50f049ee	DELETE	undefined	/employees
+20221127	12:05:24	bdfb3835-2ce5-4acf-980f-3a1cae4e80e8	DELETE	undefined	/employees
+20221127	12:06:47	5c9f9b56-5df9-4b16-889f-a57693121d97	DELETE	undefined	/employees
+20221127	12:06:52	ef62a948-256e-4ba5-889b-26cf1db1af26	DELETE	undefined	/employees
+20221127	12:07:22	c662c35d-e1b2-4b78-86c4-1f3e97729f84	DELETE	undefined	/employees
+20221127	12:07:58	4f3130cf-dd2f-4d51-a2a5-a70423a181a1	DELETE	undefined	/employees
+20221127	12:08:17	b94f2b18-b969-422c-8eac-dcfe50fc88cc	DELETE	undefined	/employees
+20221127	12:08:22	c75ef5d0-c357-4057-937b-96d1870ff5a7	DELETE	undefined	/employees
+20221127	12:08:45	bbd9f4af-877f-4fef-948a-6b4a98b26279	DELETE	undefined	/employees
+20221127	12:08:51	3282ca6d-d092-4c4c-a1b3-4070b34bf17e	DELETE	undefined	/employees

@@ -15,7 +15,7 @@ const handleLogIn = async (req, res) => {
 
   if (!exsistUser) res.status(401).json({ message: 'userName not exsist' });
   const logIn = await bcrypt.compare(pwd, exsistUser.password);
-  if (logIn) res.status(201).json({ message: `logIn ${user} Sucsses!` });
+  if (logIn) res.status(201).json({ message: `User ${user} is logeed in!` });
   else res.status(409).json({ message: 'password not cuurect' });
 };
 
